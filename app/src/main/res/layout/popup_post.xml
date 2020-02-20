@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:elevation="2dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/auth_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/author_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textSize="10dp"
+                android:text="Author Name"
+                android:textColor="#000"
+                android:layout_toRightOf="@id/auth_img"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/date_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textSize="10dp"
+                android:text="Feb. 20, 2020"
+                android:layout_toRightOf="@id/auth_img"
+                android:layout_below="@id/author_txt"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_below="@id/auth_img"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/pop_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:text="Title Here"
+                android:textSize="20sp"
+                android:textColor="#000"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/pop_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pop_title"
+                android:fontFamily="@font/regular"
+                android:textSize="15sp"
+                android:text="Details here."/>
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/pop_image"
+                android:layout_below="@id/pop_details"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"/>
+        </RelativeLayout>
+
+    </ScrollView>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/scroll"
+        android:background="#d5d5d5"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/up_btn"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/up_ic"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/view1"/>
+
+    <TextView
+        android:id="@+id/upvote_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:textSize="15sp"
+        android:text="0"
+        android:layout_below="@id/view1"
+        android:layout_toRightOf="@id/up_btn"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/down_btn"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/up_ic"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/view1"
+        android:layout_toRightOf="@id/upvote_txt"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/downvote_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:textSize="15sp"
+        android:text="0"
+        android:layout_below="@id/view1"
+        android:layout_toRightOf="@id/down_btn"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/delete_btn"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete_ic"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/view1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/up_btn"
+        android:background="#d5d5d5"/>
+
+    <ScrollView
+        android:layout_below="@id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/comment_edit">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comrec"
+            android:layout_below="@id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"/>
+
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/comment_edit"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:fontFamily="@font/regular"
+        android:textSize="15sp"
+        android:hint="Comment here."
+        android:padding="15dp"
+        android:background="#fff"
+        android:elevation="5dp"
+        android:layout_toLeftOf="@id/comment_btn"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/comment_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:src="@drawable/comment_ic"
+        android:tint="#009688"
+        android:elevation="5dp"/>
+
+
+</RelativeLayout>

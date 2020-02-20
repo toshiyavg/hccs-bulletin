@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bulletin"
+        android:title="Bulletin"
+        android:icon="@drawable/bulletin_iconn"
+        />
+    <item
+        android:id="@+id/compose"
+        android:title="Compose"
+        android:icon="@drawable/post_icon"
+        />
+    <item
+        android:id="@+id/discuss"
+        android:title="Discussion"
+        android:icon="@drawable/discuss_icon"
+        />
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/profile_icon"
+        />
+</menu>

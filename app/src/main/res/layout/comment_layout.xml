@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/com_pic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:id="@+id/user_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/com_pic"
+            android:fontFamily="@font/bold"
+            android:text="User Name"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/comment_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_txt"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/com_pic"
+            android:fontFamily="@font/regular"
+            android:text="This is the comment."
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/time_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comment_txt"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/com_pic"
+            android:fontFamily="@font/regular"
+            android:text="Feb. 20, 2020"
+            android:textColor="#000"
+            android:textSize="10sp" />
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f1f1f1"
+            android:layout_below="@id/time_txt"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

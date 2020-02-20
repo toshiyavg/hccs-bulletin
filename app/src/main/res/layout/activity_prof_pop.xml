@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.Caps.ProfPop"
+    android:background="#fff">
+
+    <View
+        android:layout_alignParentStart="true"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/btn_gr"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/prof_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="3dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/name_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prof_pic"
+        android:layout_centerHorizontal="true"
+        android:text="First Last"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:fontFamily="@font/bold"/>
+
+    <TextView
+        android:id="@+id/course_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Course"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:fontFamily="@font/regular"
+        android:layout_below="@id/name_txt1"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/year_txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Year"
+        android:fontFamily="@font/regular"
+        android:layout_below="@id/course_txt1"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000"/>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:background="#d5d5d5"
+        android:layout_below="@id/year_txt1"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/message_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/start_btn"
+        android:layout_below="@id/line1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Send Message"
+        android:textColor="#fff"
+        android:textAllCaps="false"/>
+</RelativeLayout>
