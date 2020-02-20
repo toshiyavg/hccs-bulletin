@@ -63,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public  void updatee(){
-        AppUpdater appUpdater = new AppUpdater(this).setDisplay(Display.NOTIFICATION).setGitHubUserAndRepo("toshiyavg", "hccs-corner").showEvery(5);
+        AppUpdater appUpdater = new AppUpdater(this).setDisplay(Display.NOTIFICATION).setGitHubUserAndRepo("toshiyavg", "hccs-bulletin").showEvery(5);
         appUpdater.start();
         AppUpdaterUtils appUpdaterUtils = new AppUpdaterUtils(this)
-                .setGitHubUserAndRepo("toshiyavg", "hccs-corner")
+                .setGitHubUserAndRepo("toshiyavg", "hccs-bulletin")
                 .withListener(new AppUpdaterUtils.UpdateListener() {
                     @Override
                     public void onSuccess(Update update, Boolean isUpdateAvailable) {
